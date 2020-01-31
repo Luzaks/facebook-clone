@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: facebook_clone_production
-  username: mcastorena0316
+  username: facebook_clone
   password: <%= ENV['FACEBOOK_CLONE_DATABASE_PASSWORD'] %>
