@@ -1,2 +1,13 @@
 
-<h1> Im in show</h1>
+
+<section class= "user-info">
+
+  <%= gravatar_for @current_user %>
+  <br>
+ <p> <%= @current_user.name %> <%= @current_user.lastname %> </p>
+  <br>
+  <p><%= @current_user.email %> </p>
+ <br>
+ 
+</h1>
+</section>
