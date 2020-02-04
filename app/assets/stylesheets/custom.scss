@@ -55,7 +55,7 @@
       padding-top: 9px;
       font-weight: bold;
       height: 82px;
-
+      width: 100%;
     }
     
     .navbar-nav li a {
@@ -64,13 +64,15 @@
     
     }
     
-   
-
+  
 .nav {
     background-color: #29487d;
 }
 
 .user-info {
-  margin-top: 92px;
   margin-left: 10px;
+}
+
+.edit-header {
+  margin: 0;
 }

@@ -1,6 +1,6 @@
 
 
-<section class= "user-info">
+<section class= "user-info col-md-4">
 
   <%= gravatar_for @current_user %>
   <br>
@@ -11,3 +11,12 @@
  
 </h1>
 </section>
+
+<div class="col-md-8">
+<% if @current_user.posts.any? %>
+  <h3>Posts (<%= @current_user.posts.count %>)</h3>
+  <ol class="posts">
+    <%= render @posts %>
+  </ol>
+<% end %>
+</div>
