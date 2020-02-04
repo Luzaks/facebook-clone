@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     end
   end
   devise_for :users
-  resources :users, :only => [:show]
+  resources :users, :only => [:show, :index]
 
 end

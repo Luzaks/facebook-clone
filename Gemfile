@@ -7,7 +7,7 @@ ruby '2.6.5'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'bootstrap-sass', '3.3.7'
 gem 'bcrypt', '3.1.12'
-gem 'faker'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'devise'
 gem 'omniauth-facebook'
 # Use postgresql as the database for Active Record
