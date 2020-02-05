@@ -10,6 +10,8 @@ gem 'bcrypt', '3.1.12'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'will_paginate', '~> 3.2', '>= 3.2.1'
+gem 'bootstrap-will_paginate', '~> 1.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
