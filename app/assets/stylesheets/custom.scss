@@ -1,3 +1,4 @@
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -46,11 +47,10 @@
   
   
   .header-info {
-      float: left;
       margin-right: 10px;
-      font-size: 1.7em;
+      font-size: 12px;
+      font-family:Roboto, Helvetica, Arial, sans-serif;
       color: white;
-      text-transform: uppercase;
       letter-spacing: -1px;
       padding-top: 9px;
       font-weight: bold;
@@ -69,8 +69,8 @@
     background-color: #29487d;
 }
 
-.user-info {
-  margin-left: 10px;
+.user-info img {
+  margin: 0 auto;
 }
 
 .edit-header {

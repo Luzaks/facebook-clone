@@ -1,22 +1,19 @@
+<div class= "container-fluid">
 
+  <div class= "row">
+    <div class= "col-md-4 col-sm-12 user-info text-center">
+      <%= gravatar_for @current_user %>
+      <p> <%= @current_user.name %> <%= @current_user.lastname %> </p>
+      <p><%= @current_user.email %> </p>
+    </div>
 
-<section class= "user-info col-md-4">
-
-  <%= gravatar_for @current_user %>
-  <br>
- <p> <%= @current_user.name %> <%= @current_user.lastname %> </p>
-  <br>
-  <p><%= @current_user.email %> </p>
- <br>
- 
-</h1>
-</section>
-
-<div class="col-md-8">
-<% if @current_user.posts.any? %>
-  <h3>Posts (<%= @current_user.posts.count %>)</h3>
-  <ol class="posts">
-    <%= render @posts %>
-  </ol>
-<% end %>
+    <div class="col-md-8">
+    <% if @current_user.posts.any? %>
+      <h3>Posts (<%= @current_user.posts.count %>)</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+    <% end %>
+    </div>
+  </div>
 </div>
