@@ -7,14 +7,14 @@
       <p><%= @current_user.email %> </p>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-8 post-info">
     
     <%= render 'shared/newpost' %>
     <% if @current_user.posts.any? %>
       <h3>Posts (<%= @current_user.posts.count %>)</h3>
-      <ol class="posts">
+      <ul class="posts">
         <%= render @posts %>
-      </ol>
+      </ul>
       <%= will_paginate @posts %>
     <% end %>
     </div>

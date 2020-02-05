@@ -2,7 +2,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-  
+body {
+ background-color: #e9ebee;
+} 
   
   textarea {
     resize: vertical;
@@ -91,4 +93,20 @@
   .form-control {
     color: $state-danger-text;
   }
+}
+
+textarea {
+  width: 100%;
+}
+
+.post-info {
+  padding-right:50px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.btn-publish {
+  width: 95%;
+  margin-top: 10px;
+  
 }
