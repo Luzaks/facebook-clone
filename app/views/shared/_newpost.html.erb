@@ -1,6 +1,5 @@
 <%= form_for(@post) do |f| %>
-    <%= render 'shared/sharederrors', object: f.object %>
-    <div class="field">
+  <div class="field">
       <%= f.text_area :content, placeholder: "What are you thinking..." %>
     </div>
     <%= f.submit "Publish", class: "btn btn-primary" %>

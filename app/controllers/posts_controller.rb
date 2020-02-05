@@ -6,7 +6,7 @@ class PostsController < ApplicationController
           flash[:success] = "post created!"
           redirect_to :authenticated_root
         else
-         flash[:danger] = "No post created!"
+        flash[:danger] = "Try again!"
          redirect_to :authenticated_root
         end
     end
@@ -14,7 +14,11 @@ class PostsController < ApplicationController
     def edit
     end
 
-    def destroy
+     def destroy
+    @post = current_user.posts.find_by(id: params[:id])
+    @post.destroy
+    flash[:success] = "Micropost deleted"
+    redirect_to :authenticated_root
     end
 
     private
@@ -22,5 +26,8 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:content)
     end
+
+  
+   
 
 end
