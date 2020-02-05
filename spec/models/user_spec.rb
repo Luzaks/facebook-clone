@@ -17,17 +17,16 @@ RSpec.describe User, type: :model do
     it 'should have an email' do
       expect(@user.email).to be_present
     end
-
   end
 
   context 'with invalid details' do
     it 'should not be valid' do
-      @user.name = "    "
+      @user.name = '    '
       expect(@user).to_not be_valid
     end
 
     it 'should not be valid' do
-      @user.lastname = "    "
+      @user.lastname = '    '
       expect(@user).to_not be_valid
     end
 

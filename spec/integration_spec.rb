@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.feature 'Integrations', type: :feature do
-    before :each do 
-        user = User.create!(name: 'Foo', lastname: 'Bar', email: 'goobar@example.org', password: 'foobar', password_confirmation: 'foobar')
-        post = user.posts.build(content: 'Content')
-        post.save
-    end
+  before :each do
+    user = User.create!(name: 'Foo', lastname: 'Bar', email: 'goobar@example.org', password: 'foobar', password_confirmation: 'foobar')
+    post = user.posts.build(content: 'Content')
+    post.save
+  end
   scenario 'Log in, Create a Post and Log out a user' do
     visit new_user_session_path
     expect(page.current_path).to eq '/users/sign_in'
@@ -23,5 +23,4 @@ RSpec.feature 'Integrations', type: :feature do
     click_on 'Logout'
     expect(page.current_path).to eq '/users/sign_in'
   end
-
 end
