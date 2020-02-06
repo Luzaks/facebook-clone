@@ -1,0 +1,12 @@
+<li id="post-<%= post.id %>">
+  <p class="content"><%= post.user.name %>    <%= post.user.lastname %></p>
+  <span class="content"><%= post.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(post.created_at) %> ago.
+  </span>
+  <% if authenticated_user? %>
+    <%= link_to "delete", post, method: :delete, data: { confirm: "You sure?" } %>
+  <% end %>
+  
+ 
+</li>
