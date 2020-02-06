@@ -10,13 +10,14 @@
     <div class="col-md-8 post-info text-center">
     
     <%= render 'shared/newpost' %>
-    Posts 
-    <%= has_any_post?(current_user) %> 
-    <ul class="posts">
-    <%= render @posts %>
-    </ul>
-    <%= will_paginate @posts %>
-    
+
+
+      <h3>Posts (<%= @current_user.posts.count %>)</h3>
+      <ul class="posts">
+        <%= render @posts %>
+      </ul>
+      <%= will_paginate @posts %>
+
     </div>
   </div>
 </div>

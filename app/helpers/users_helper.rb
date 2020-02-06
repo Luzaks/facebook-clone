@@ -5,11 +5,3 @@ module UsersHelper
     image_tag(gravatar_url, alt: current_user.name, class: 'gravatar')
     end
 end
-
-
-
-def has_any_post?(current_user)
- if current_user.posts.any? 
-    current_user.posts.count  
- end
-end

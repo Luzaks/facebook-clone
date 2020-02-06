@@ -21,6 +21,6 @@ RSpec.feature 'Integrations', type: :feature do
     have_link 'Edit profile'
     have_link 'Logout'
     click_on 'Logout'
-    expect(page.current_path).to eq '/users/sign_in'
+    expect(page.current_path).to eq '/'
   end
 end

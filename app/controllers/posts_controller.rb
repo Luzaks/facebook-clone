@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
-  before_action :correct_user,   only: :destroy
+  before_action :correct_user, only: :destroy
 
   def index
-  @posts= Post.all
-  end 
- 
+    @posts = Post.all
+  end
+
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
@@ -16,13 +16,13 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit; 
+  def edit
   end
 
   def destroy
     @post = current_user.posts.find_by(id: params[:id])
     @post.destroy
-    flash[:success] = 'Micropost deleted'
+    flash[:success] = 'Post deleted'
     redirect_to :authenticated_root
  end
 
