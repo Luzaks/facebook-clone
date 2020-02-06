@@ -1,4 +1,10 @@
 class PostsController < ApplicationController
+  before_action :correct_user,   only: :destroy
+
+  def index
+  @posts= Post.all
+  end 
+ 
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
@@ -10,7 +16,8 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit; 
+  end
 
   def destroy
     @post = current_user.posts.find_by(id: params[:id])
@@ -23,5 +30,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:content)
+  end
+
+  def correct_user
+    @post = current_user.posts.find_by(id: params[:id])
+    redirect_to :authenticated_root if @post.nil?
   end
 end

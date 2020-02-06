@@ -1,0 +1,13 @@
+<h1>Timeline</h1>
+
+<ul class="text-center">
+  <% @posts.each do |post| %>
+    <li>    
+    <p>Author: <%= post.user.name %> <%= post.user.lastname %></p>
+    <p>Content: <%= post.content%></p>
+    <span> Posted <%= time_ago_in_words(post.created_at) %> ago. </span>
+    <br>    
+    </li> 
+    <br>
+  <% end %>
+</ul>

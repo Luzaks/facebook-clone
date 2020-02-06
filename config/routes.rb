@@ -5,11 +5,11 @@ Rails.application.routes.draw do
     end
   
     unauthenticated :user do
-      root to: 'static_pages#home', as: :unauthenticated_root
+      root to: 'devise/sessions#new', as: :unauthenticated_root
     end
   end
   devise_for :users
   resources :users, :only => [:show, :index]
-  resources :posts, :only => [:create, :destroy]
+  resources :posts, :only => [:create, :destroy, :index]
 
 end
