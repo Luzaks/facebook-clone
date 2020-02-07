@@ -7,6 +7,27 @@
   <% if authenticated_user? %>
     <%= link_to "delete", post, method: :delete, data: { confirm: "You sure?" } %>
   <% end %>
-  
- 
 </li>
+
+<% if post.comments.any?%>
+  <% @comments.each do |comment| %>
+    <li>    
+      <span><%= comment.text%></span>
+      <span><%= comment.user.name%></span>    <span><%= comment.user.lastname%></span>
+      <span class="timestamp">
+      Posted <%= time_ago_in_words(comment.created_at) %> ago.
+      </span>
+      <% if authenticated_user? %>
+        <%= link_to "delete", comment, method: :delete, data: { confirm: "You sure?" } %>
+      <% end %>
+    </li> 
+  <% end %>
+<% end %>
+
+<%= form_for(post.comments.new, url: comments_path) do |f| %>
+  <div class="field">
+      <%= f.text_field :text, placeholder: "Comment..." %>
+  </div>
+    <%= f.submit "Publish", class: "btn btn-primary btn-publish" %>
+<% end %>
+ 
