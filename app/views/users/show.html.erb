@@ -1,10 +1,11 @@
 <div class= "container-fluid">
 
   <div class= "row">
+
     <div class= "col-md-4 col-sm-12 user-info text-center">
-      <%= gravatar_for @current_user %>
-      <p> <%= @current_user.name %> <%= @current_user.lastname %> </p>
-      <p><%= @current_user.email %> </p>
+      <%= gravatar_for(@user)%>
+      <p> <%= @user.name %> <%= @user.lastname %> </p>
+      <p><%= @user.email %> </p>
     </div>
 
     <div class="col-md-8 post-info text-center">
@@ -12,7 +13,7 @@
     <%= render 'shared/newpost' %>
 
 
-      <h3>Posts (<%= @current_user.posts.count %>)</h3>
+      <h3>Posts (<%= @user.posts.count %>)</h3>
       <ul class="posts">
         <%= render @posts %>
       </ul>
