@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:destroy, :create]
 
   def index
+    @post= Post.new
     @posts = Post.all
   end
 
@@ -31,4 +32,6 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:content)
   end
+
+ 
 end

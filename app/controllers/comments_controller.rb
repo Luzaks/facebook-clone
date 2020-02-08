@@ -1,29 +1,39 @@
 class CommentsController < ApplicationController
 
     before_action :authenticate_user!, only: [:destroy, :create]
+    before_action :get_post
+
+    def index
+
+    @comments = @post.comments
+
+    end
 
     def create
-        @posts = Post.find(params[:post_id])
-        @comment = current_user.comments.create(comment_params)
+        @comment = Comment.new(comment_params)
+        @comment.user= current_user
+        @comment.post_id= params[:post_id]
+      
+        
         if @comment.save
             flash[:success] = 'Comment created!'
-            redirect_to current_user
+            redirect_to authenticated_root_path
           else
-            flash[:danger] = 'Try again a comment!'
-            @comment.errors.full_messages
-            redirect_to current_user
+            flash[:danger] = 'Cannot create comment!'
+            redirect_to authenticated_root_path
           end
     end
 
     def destroy
-    @comment = current_user.comments.find_by(id: params[:id])
-    if @user != current_user
-        flash[:danger] = 'You cant delete this comment'
-        redirect_to current_user
-    else
-        @comment.destroy
-        flash[:success] = 'Post deleted'
-    end
+      @comment = @post.comments.find(params[:id])
+      if @comment.destroy
+        flash[:success] = 'Comment destroy!'
+        redirect_to authenticated_root_path
+      else
+        flash[:danger] = 'Cannot destroy!'
+        redirect_to authenticated_root_path
+      end
+
     
     end
 
@@ -31,6 +41,10 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:text)
+  end
+
+  def get_post
+    @post = Post.find(params[:post_id])
   end
 
 end

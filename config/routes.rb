@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   devise_for :users
   resources :users, :only => [:show, :index]
-  resources :posts, :only => [:create, :destroy, :index]
-  resources :comments, :only => [:create, :destroy]
-
+  resources :posts, :only => [:create, :destroy, :index] do
+    resources :comments, :only => [:create, :destroy]
+  end
 end
