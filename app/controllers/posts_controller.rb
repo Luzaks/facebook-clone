@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:destroy, :create]
 
   def index
-    @post= Post.new
+    @post = Post.new
     @posts = Post.all
   end
 
@@ -10,10 +10,11 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = 'post created!'
-      redirect_to current_user
+      redirect_to authenticated_root_path
+
     else
       flash[:danger] = 'Try again!'
-      redirect_to current_user
+      redirect_to authenticated_root_path
     end
   end
 
@@ -32,6 +33,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:content)
   end
-
- 
 end

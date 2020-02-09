@@ -14,7 +14,8 @@ RSpec.feature 'Integrations', type: :feature do
     click_button 'Log in'
     expect(page.current_path).to eq authenticated_root_path
     expect(page).to have_text 'Signed in successfully.'
-    have_button 'Publish'
+    click_on 'Profile'
+    expect(page.current_path).to eq '/users/1'
     page.fill_in 'post_content', with: 'Content'
     click_button 'Publish'
     expect(page).to have_text 'post created!'

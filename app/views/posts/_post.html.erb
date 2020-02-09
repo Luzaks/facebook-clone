@@ -13,7 +13,6 @@
     </li>
   </div>
 
-<% if post.comments.any?%>
 <h3>Comments (<%= post.comments.count %>)</h3>
   <% post.comments.each do |comment| %>
     <li class="comments-list">    
@@ -28,7 +27,7 @@
       <% end %>
     </li> 
   <% end %>
-<% end %>
+
 
 
 <%= form_for(post.comments.new, url: post_comments_path(post)) do |f| %>

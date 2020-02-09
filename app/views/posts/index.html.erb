@@ -1,11 +1,17 @@
 <h1>Timeline</h1>
 
-<ul class="text-center">
+<ul class="index-list">
   <% @posts.each do |post| %>
-    <li>    
-    <p>Author:<%= link_to post.user.name, post.user %></p>
-    <p>Content: <%= post.content%></p>
-    <span> Posted <%= time_ago_in_words(post.created_at) %> ago. </span>
+    <li>
+      <div class="gravatar-list">   
+        <%= gravatar_for(post.user) %>
+        <div class= "name-posted-list"> 
+        <p><%= link_to post.user.name, post.user %> <%= link_to post.user.lastname, post.user %></p>
+        <p><%= time_ago_in_words(post.created_at) %> ago. </p>
+        </div> 
+      </div>
+   
+    <p class= "text-center"><%= post.content%></p>
     <br>    
     </li> 
     <br>
