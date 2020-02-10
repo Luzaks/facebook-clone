@@ -10,6 +10,12 @@
       <% if authenticated_user? %>
         <%= link_to "Delete", post, method: :delete, data: { confirm: "You sure?" } %>
       <% end %>
+      <p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+      <% if like_unlike(post) %>
+        <%= button_to 'Unlike', post_like_path(post, like_unlike(post)), method: :delete %>
+      <% else %>
+        <%= button_to 'Like', post_likes_path(post), method: :post %>
+      <% end %>
     </li>
   </div>
 
