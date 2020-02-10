@@ -31,6 +31,13 @@
       <% if authenticated_comment?(comment.user.name) %>
         <%= link_to "Delete", post_comment_path(post, comment), method: :delete, data: { confirm: "You sure?" } %>
       <% end %>
+      <p><%= comment.likes.count %> <%= (comment.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+      
+      <% if like_unlike(comment) %>
+      <%= button_to 'Unlike', post_comment_like_path(post, comment, like_unlike(comment)), method: :delete %>
+    <% else %>
+    <%= button_to 'Like', post_comment_likes_path(post.comments, comment), method: :post %>
+    <% end %>
     </li> 
   <% end %>
 

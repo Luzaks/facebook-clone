@@ -14,11 +14,11 @@ class LikesController < ApplicationController
   end  
 
   def destroy
-    @post = Post.find(params[:post_id])
-    @post_liked_id = @post.likes.find(params[:id])
-    
-    if @post_liked_id
-      @post_liked_id.destroy
+      @like_id = @likeable.likes.find(params[:id])      
+
+
+    if @like_id
+      @like_id.destroy
       flash[:success] = "Unliked!"
       redirect_to authenticated_root_path
     else
