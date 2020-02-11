@@ -4,7 +4,7 @@ RSpec.describe Comment, type: :model do
   before :each do
     @user = User.create!(name: 'Foo', lastname: 'Bar', email: 'goobar@example.org', password: 'foobar', password_confirmation: 'foobar')
     @post = Post.create!(content: 'Content', author: @user.id)
-    @comment = Comment.create!(text: "Text Comment", user_id: @user.id, post_id: @post.id)
+    @comment = Comment.create!(text: 'Text Comment', user_id: @user.id, post_id: @post.id)
   end
 
   context 'with valid details' do

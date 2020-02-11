@@ -7,6 +7,8 @@ example_id                                      | status  | run_time        |
 ./spec/helpers/users_helper_spec.rb[1:1]        | pending | 0.00003 seconds |
 ./spec/integrations/create_comment_spec.rb[1:1] | passed  | 0.61718 seconds |
 ./spec/integrations/create_comment_spec.rb[1:2] | passed  | 0.62233 seconds |
+./spec/integrations/create_likes_spec.rb[1:1]   | passed  | 0.56869 seconds |
+./spec/integrations/create_likes_spec.rb[1:2]   | passed  | 3.45 seconds    |
 ./spec/integrations/login_post_spec.rb[1:1]     | passed  | 2.46 seconds    |
 ./spec/models/comment_spec.rb[1:1:1]            | passed  | 0.04567 seconds |
 ./spec/models/comment_spec.rb[1:1:2]            | passed  | 0.04252 seconds |

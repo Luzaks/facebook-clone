@@ -2,11 +2,11 @@ class LikesController < ApplicationController
   def create
     @like = Like.new(user_id: current_user.id)
     if @like
-      flash[:success] = "Liked!"
+      flash[:success] = 'Liked!'
       @like = @likeable.likes.create(user_id: current_user.id)
       redirect_to authenticated_root_path
     else
-      flash[:danger] = "Already liked"
+      flash[:danger] = 'Already liked'
       redirect_to authenticated_root_path
     end
   end
@@ -16,10 +16,10 @@ class LikesController < ApplicationController
 
     if @like_id
       @like_id.destroy
-      flash[:success] = "Unliked!"
+      flash[:success] = 'Unliked!'
       redirect_to authenticated_root_path
     else
-      flash[:notice] = "Cannot unlike"
+      flash[:notice] = 'Cannot unlike'
       redirect_to authenticated_root_path
     end
   end
