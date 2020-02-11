@@ -5,8 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet');
-
-
+@import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
 
 
 body {
@@ -145,15 +144,18 @@ textarea {
       width:80%;
       border-bottom: 2px solid #e9ebee;
       padding: 30px 15px 28px 15px;
-      p.content a {
+      position: relative;
+      p.content {
+        a {
         font-family: 'Courgette', cursive;
         font-size: 1.4em;
         font-weight: 600;
         color: #337ab7;
         margin-bottom: 10px;
-      }
-      p.content a:hover {
+        }
+        a:hover {
         text-decoration: underline;
+        }
       }
       span.content {
         font-size: 1.1em;
@@ -166,6 +168,28 @@ textarea {
       }
       .timestamp {
         color: #616770;
+      }
+      .button_to {
+        input {
+          font-family: 'Barlow Condensed', sans-serif;
+          position: absolute;
+          border: dashed 3px #333333;
+          border-radius: 17px;
+          background-color: #e9ebee;
+          padding: 5px 10px;
+          left: 45px;
+          bottom: 15px;
+          letter-spacing: 0.2em;
+        }
+        input:hover {
+          color: red;
+          font-weight: 600;
+          border-color: 1px dashed #616770;
+        }
+        input:active {
+          color: black;
+          border-color: 2px dashed black;
+        }
       }
     }
     .comments-list {
@@ -196,6 +220,21 @@ textarea {
         a {
           font-family: 'Source Code Pro', monospace;
           font-size: 1em;
+        }
+        .button_to {
+          input {
+            font-family: 'Barlow Condensed', sans-serif;
+            border: dashed 2px #333333;
+            border-radius: 17px;
+            background-color: white;
+            padding: 1px 6px;
+            letter-spacing: 0.1em;
+            color: #333333;
+          }
+          input:hover {
+            color: red;
+            border-color: 1px dashed #616770;
+          }
         }
       }
     }
@@ -331,38 +370,9 @@ textarea {
   }
 }
 
-.index-list{
- 
-  padding-left: 0;
-  li{
-    margin: 0 auto;
-    width:40%;
-    list-style: none;
-    background-color: white;
-    border-radius: 5px;
-    .gravatar-list {
-      display: flex;
-      padding: 5px;
-      img {
-        border-radius: 100%;
-        height: 40px;
-        width: 40px;
-        margin-right: 5px;
-      }
-    }
-    .name-posted-list {
-      p {
-        margin-bottom: 0;
-        line-height: normal;
-      }
-      p:nth-child(2) {
-        color: gray;
-      }
-    }
-  }
-
-  
-
-  
+.like-content {
+  font-family: 'Kalam', cursive;
+  color: black;
+  margin: 0;
 }
 

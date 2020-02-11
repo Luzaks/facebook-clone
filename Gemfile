@@ -12,6 +12,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'will_paginate', '~> 3.2', '>= 3.2.1'
 gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
