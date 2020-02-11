@@ -65,9 +65,9 @@
 
 
 <%= form_for(post.comments.new, url: post_comments_path(post)) do |f| %>
-  <div class="field-comment">
+  <div class="field field-comment">
       <%= f.text_field :text, placeholder: "Comment..." %>
   </div>
-    <%= f.submit "Writte a comment.", class: "btn btn-primary btn-publish-comment" %>
+    <%= f.submit "Write a comment.", class: "btn btn-primary btn-publish-comment" %>
 <% end %>
 </section>
