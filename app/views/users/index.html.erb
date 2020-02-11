@@ -3,7 +3,11 @@
     <li>    
     <span>Name: <%= link_to user.name, user %></span>
     <span>Lastname: <%= user.lastname%></span>
-    <br>    
+    <br>
+    <% if user != current_user %>
+      <%= button_to 'Add as a friend', friendships_url(friend_id: user.id), method: :post %> 
+         
+    <% end %>
     </li> 
     <br>
   <% end %>

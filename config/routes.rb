@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users, :only => [:show, :index]
+  resources :friendships
   
   resources :posts, :only => [:create, :destroy, :index] do
     resources :likes, module: :posts
