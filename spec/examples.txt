@@ -1,17 +1,23 @@
 example_id                                      | status  | run_time        |
 ----------------------------------------------- | ------- | --------------- |
 ./spec/helpers/comments_helper_spec.rb[1:1]     | pending | 0.00002 seconds |
+./spec/helpers/likes_helper_spec.rb[1:1]        | pending | 0.00002 seconds |
 ./spec/helpers/posts_helper_spec.rb[1:1]        | pending | 0.00002 seconds |
 ./spec/helpers/static_pages_helper_spec.rb[1:1] | pending | 0.00001 seconds |
-./spec/helpers/users_helper_spec.rb[1:1]        | pending | 0.00001 seconds |
-./spec/integration_spec.rb[1:1]                 | passed  | 2.69 seconds    |
-./spec/models/comment_spec.rb[1:1]              | pending | 0.00001 seconds |
-./spec/models/post_spec.rb[1:1:1]               | passed  | 0.01692 seconds |
-./spec/models/post_spec.rb[1:1:2]               | passed  | 0.01693 seconds |
-./spec/models/post_spec.rb[1:2:1]               | passed  | 0.01908 seconds |
-./spec/models/user_spec.rb[1:1:1]               | passed  | 0.02246 seconds |
-./spec/models/user_spec.rb[1:1:2]               | passed  | 0.01721 seconds |
-./spec/models/user_spec.rb[1:1:3]               | passed  | 0.015 seconds   |
-./spec/models/user_spec.rb[1:2:1]               | passed  | 0.01797 seconds |
-./spec/models/user_spec.rb[1:2:2]               | passed  | 0.01394 seconds |
-./spec/models/user_spec.rb[1:2:3]               | passed  | 0.01899 seconds |
+./spec/helpers/users_helper_spec.rb[1:1]        | pending | 0.00002 seconds |
+./spec/integrations/create_comment_spec.rb[1:1] | failed  | 2.46 seconds    |
+./spec/integrations/login_post_spec.rb[1:1]     | passed  | 2.05 seconds    |
+./spec/models/comment_spec.rb[1:1:1]            | passed  | 0.0257 seconds  |
+./spec/models/comment_spec.rb[1:1:2]            | passed  | 0.02795 seconds |
+./spec/models/comment_spec.rb[1:2:1]            | passed  | 0.03192 seconds |
+./spec/models/like_spec.rb[1:1:1]               | passed  | 0.08374 seconds |
+./spec/models/like_spec.rb[1:1:2]               | passed  | 0.04855 seconds |
+./spec/models/post_spec.rb[1:1:1]               | passed  | 0.1132 seconds  |
+./spec/models/post_spec.rb[1:1:2]               | passed  | 0.01527 seconds |
+./spec/models/post_spec.rb[1:2:1]               | passed  | 0.63484 seconds |
+./spec/models/user_spec.rb[1:1:1]               | passed  | 0.0105 seconds  |
+./spec/models/user_spec.rb[1:1:2]               | passed  | 0.01164 seconds |
+./spec/models/user_spec.rb[1:1:3]               | passed  | 0.00991 seconds |
+./spec/models/user_spec.rb[1:2:1]               | passed  | 0.01547 seconds |
+./spec/models/user_spec.rb[1:2:2]               | passed  | 0.01623 seconds |
+./spec/models/user_spec.rb[1:2:3]               | passed  | 0.01696 seconds |

@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-
   def create
     @like = Like.new(user_id: current_user.id)
     if @like
@@ -10,12 +9,10 @@ class LikesController < ApplicationController
       flash[:danger] = "Already liked"
       redirect_to authenticated_root_path
     end
-    
-  end  
+  end
 
   def destroy
-      @like_id = @likeable.likes.find(params[:id])      
-
+    @like_id = @likeable.likes.find(params[:id])
 
     if @like_id
       @like_id.destroy
