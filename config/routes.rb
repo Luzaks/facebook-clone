@@ -10,8 +10,13 @@ Rails.application.routes.draw do
     end
   end
 
+
   devise_for :users
+
+  post '/friendship/create/:id', to: 'friendships#create'
+
   resources :users, :only => [:show, :index]
+  resources :friendships
   
   resources :posts, :only => [:create, :destroy, :index] do
     resources :likes, module: :posts
@@ -19,4 +24,6 @@ Rails.application.routes.draw do
       resources :likes, module: :comments
     end
   end
+
+
 end
