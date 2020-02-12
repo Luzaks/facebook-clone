@@ -180,11 +180,7 @@
       <i class="fas fa-home"></i>    <%= link_to 'Home', authenticated_root_path, :class => 'navbar-link' %> |
       <i class="fas fa-users"></i>    <%= link_to 'Users', users_path, :class => 'navbar-link' %>  |
       <i class="far fa-dot-circle"></i>    <%= link_to 'Notifications', users_path, :class => 'navbar-link' %>  
-      <% if current_user.inverse_friendships.length > 0 %>
-        <%= current_user.inverse_friendships.length %> |
-      <% else %>
-      |
-      <% end %>
+      <%= notification_counter(current_user).length%> |
       <i class="fas fa-user-edit"></i>    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
     <% else %>
