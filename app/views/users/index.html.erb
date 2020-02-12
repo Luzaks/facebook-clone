@@ -1,7 +1,7 @@
 <ul class="text-center">
   <% @users.each do |user| %>
     <li>    
-    <span>Name: <%= user.name %></span>
+    <span>Name: <%= link_to user.name, user %></span>
     <span>Lastname: <%= user.lastname%></span>
     <br>    
     </li> 
