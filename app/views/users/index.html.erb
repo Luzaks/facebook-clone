@@ -5,28 +5,25 @@
       <p> <%=gravatar_for(user) %></p>
       <p><%= link_to user.name, user %> <%=link_to user.lastname, user%></p>
       
-      <% if user == current_user %>
-      <%= button_to 'Go to My Profile ', "#", method: :get %>  
-      <% elsif pending_for_accept_my_request(user) == true %>
-        <%= button_to 'Cancel Request Sent',"#", method: :delete %> 
-      <% elsif pending_for_me_to_accept(user) == true %>
-      <div>
-        <%= button_to 'Acept Request',"#", method: :edit %> 
-        <%= button_to 'Cancel Request',"#", method: :delete %> 
-      </div>
-      <% elsif we_are_friends(user) ==true %>
-      <%= button_to 'Go to Friend Profile',"#", method: :get %> 
+      <% if its_me?(user) %>
+        <%= button_to 'Go to My Profile ', user, method: :get %>  
+      <% elsif pending_for_accept_my_request(user) %>
+        <%= button_to 'Cancel Request Sent', friendship_path(finding_friendship_id(user)), method: :delete %> 
+      <% elsif pending_for_me_to_accept(user) %>
+        <div>
+          <%= button_to 'Accept Request',edit_friendship_path(finding_friendship_id(user)), method: :get %> 
+          <%= button_to 'Cancel Request',friendship_path(finding_friendship_id(user)), method: :delete %> 
+        </div>
+      <% elsif we_are_friends(user)  %>
+        <%= button_to 'Go to My Friend\'s Profile ', user, method: :get %>  
+        <%= button_to 'Remove',friendship_path(finding_friendship_id(user)), method: :delete %> 
       <% elsif %>
         <%= button_to 'Add Friend', "#{authenticated_root_path}friendship/create/#{user.id}", method: :post %>  
       <% end %>
+      <% if pending_for_me_to_accept(user) %>
+        <%= list_pending_friends(user).count %>
+      <% end %>
       </li> 
-      <p>Number of friends: <%= user.friendships.count%></p>
-      <p>Number of  inverse friends: <%= user.inverse_friendships.count%></p>
-      Pendiing for me to accept <%= pending_for_me_to_accept(user) %>
-      pending for accept me  <%=  pending_for_accept_my_request(user) %>
     </div>  
   <% end %>
-
-
-
 </ul>
