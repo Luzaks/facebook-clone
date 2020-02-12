@@ -1,3 +1,14 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.users-list {
+    list-style: none;
+    background-color: white;
+    width:30%;
+    margin: 0 auto;
+    div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img, form {
+         padding: 10px;
+        }
+        }
+}
