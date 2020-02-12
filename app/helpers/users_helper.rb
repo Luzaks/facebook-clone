@@ -31,8 +31,7 @@ module UsersHelper
     Friendship.find_by(user_id: user.id, friend_id: current_user.id)
   end  
 
-  def list_pending_friends(user)
-        
+  def list_pending_friends(user)      
     friendship_2 = @inverse_friendships.map{|friendship| friendship.user if !friendship.friendship_status}.compact
     friendship_2
   end
