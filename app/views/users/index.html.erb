@@ -20,9 +20,7 @@
       <% elsif %>
         <%= button_to 'Add Friend', "#{authenticated_root_path}friendship/create/#{user.id}", method: :post %>  
       <% end %>
-      <% if pending_for_me_to_accept(user) %>
-        <%= list_pending_friends(user).count %>
-      <% end %>
+
       </li> 
     </div>  
   <% end %>
