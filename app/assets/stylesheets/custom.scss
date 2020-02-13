@@ -11,6 +11,10 @@
 body {
  background-color: #e9ebee;
 } 
+
+ul {
+  list-style: none;
+}
   
   textarea {
     resize: vertical;
@@ -192,52 +196,6 @@ textarea {
         }
       }
     }
-    .comments-list {
-      background-color: #e9ebee;
-      padding: 8px 13px;
-      border-radius: 17px;
-      width: 70%;
-      height: auto;
-      margin-top: 10px;
-      .user-name a {
-        font-family: 'Courgette', cursive;
-        font-size: 1.1em;
-        font-weight: 600;
-        color: #337ab7;
-      }
-      .user-name a:hover {
-        font-weight: 600;
-        text-decoration: underline;
-        text-decoration-color: #337ab7;
-      }
-      .comment-text {
-        font-family: 'Kalam', cursive;
-      }
-      .timestamp {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 0.85em;
-        color: #616770;
-        a {
-          font-family: 'Source Code Pro', monospace;
-          font-size: 1em;
-        }
-        .button_to {
-          input {
-            font-family: 'Barlow Condensed', sans-serif;
-            border: dashed 2px #333333;
-            border-radius: 17px;
-            background-color: white;
-            padding: 1px 6px;
-            letter-spacing: 0.1em;
-            color: #333333;
-          }
-          input:hover {
-            color: red;
-            border-color: 1px dashed #616770;
-          }
-        }
-      }
-    }
 
     li:last-child {
       margin-bottom: 0;
@@ -374,5 +332,66 @@ textarea {
   font-family: 'Kalam', cursive;
   color: black;
   margin: 0;
+}
+
+.comments-list {
+      background-color: #e9ebee;
+      padding: 8px 13px;
+      border-radius: 17px;
+      height: auto;
+      margin-top: 10px;
+      .user-name a {
+        font-family: 'Courgette', cursive;
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #337ab7;
+      }
+      .user-name a:hover {
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: #337ab7;
+      }
+      .comment-text {
+        font-family: 'Kalam', cursive;
+      }
+      .timestamp {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 0.85em;
+        color: #616770;
+        a {
+          font-family: 'Source Code Pro', monospace;
+          font-size: 1em;
+        }
+        .button_to {
+          input {
+            font-family: 'Barlow Condensed', sans-serif;
+            border: dashed 2px #333333;
+            border-radius: 17px;
+            background-color: white;
+            padding: 1px 6px;
+            letter-spacing: 0.1em;
+            color: #333333;
+          }
+          input:hover {
+            color: red;
+            border-color: 1px dashed #616770;
+          }
+        }
+      }
+    }
+#comments-timeline {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#posts-timeline {
+  padding: 0;
+}
+
+.comments-theader {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1em;
+  color: #616770;
+  margin-top: 5px;
 }
 

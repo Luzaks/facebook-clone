@@ -175,11 +175,17 @@
 
     <div id="header-icons" class="text-right">
     <% if user_signed_in? %>
-    <span> Logged in as <%= current_user.email %> </span>
-    <%= link_to 'Profile', current_user, :class => 'navbar-link' %> |
-    <%= link_to 'Home', authenticated_root_path, :class => 'navbar-link' %> |
-    <%= link_to 'Users', users_path, :class => 'navbar-link' %> |
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <span><%= current_user.email %></span><i class="fas fa-user"></i>
+      <%= link_to 'Profile', current_user, :class => 'navbar-link' %> |
+      <i class="fas fa-home"></i>    <%= link_to 'Home', authenticated_root_path, :class => 'navbar-link' %> |
+      <i class="fas fa-users"></i>    <%= link_to 'Users', users_path, :class => 'navbar-link' %>  |
+      <i class="far fa-dot-circle"></i>    <%= link_to 'Notifications', users_path, :class => 'navbar-link' %>  
+      <% if notification_counter(current_user).length > 0 %>
+        <%= notification_counter(current_user).length%> |
+      <% else %>
+         |
+      <% end %>
+      <i class="fas fa-user-edit"></i>    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
     <% else %>
       <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
