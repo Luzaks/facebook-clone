@@ -1,17 +1,17 @@
 
-h1 {
+h1#header-timeline {
     color: #D3D3D3;
     font-family: 'Barlow Condensed', sans-serif;
     text-shadow: 2px 2px 3px gray;
     letter-spacing: 0.2em;
     font-family: 'Special Elite', cursive;
+    margin: 50px 0;
 }
 
 .index-list {
     padding-left: 0;
  }
  li.home-li {
-  width:40%;
   list-style: none;
   background-color: white;
   border-radius: 5px;
@@ -22,7 +22,6 @@ h1 {
   p.like-content,
    .button_to {
       display: flex;
-      width: 20%;
       justify-content: flex-start;
       align-items: flex-start;
    }
@@ -70,5 +69,18 @@ h1 {
       border-color: 1px dashed #616770;
    }
  }
+}
+ul.containig-posts{
+  width: fit-content;
+  #posts-timeline {
+    border-bottom: 2px solid #e9ebee;
+    padding-bottom: 7px;
+    margin-bottom: 9px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
  

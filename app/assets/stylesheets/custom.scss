@@ -9,11 +9,12 @@
 
 
 body {
- background-color: #e9ebee;
+ background-color: #e9ebee !important;
 } 
 
 ul {
   list-style: none;
+  padding: 0;
 }
   
   textarea {
@@ -137,7 +138,6 @@ textarea {
     padding-left: 0;
     li{
       border-radius: 7px;
-      width: 100%;
       padding: 15px;
     }
   }
@@ -381,7 +381,7 @@ textarea {
             font-family: 'Barlow Condensed', sans-serif;
             border: dashed 2px #333333;
             border-radius: 17px;
-            background-color: white;
+            background-color: #e9ebee;
             padding: 1px 6px;
             letter-spacing: 0.1em;
             color: #333333;
@@ -396,16 +396,20 @@ textarea {
 #comments-timeline {
   margin: 0;
   margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 #posts-timeline {
   padding: 0;
+  padding-top: 10px;
 }
 
 .comments-theader {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.1em;
   color: #616770;
-  margin-top: 5px;
+  margin-top: 7px;
+
 }
 

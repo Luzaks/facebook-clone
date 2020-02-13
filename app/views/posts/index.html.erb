@@ -1,12 +1,12 @@
-<h1>Timeline</h1>
+<h1 id="header-timeline">Timeline</h1>
 
 
 <ul class="index-list">
 
   <% @posts.each do |post| %>
-    <ul class="d-flex flex-column align-items-center justify-content-center">
+    <ul class="containig-posts d-flex flex-column align-items-center justify-content-center">
       <% if isit_me?(post.user) || friends_with?(post.author)%>
-        <li class="home-li" id="posts-timeline">
+        <li class="home-li text-center" id="posts-timeline">
           <div class="gravatar-list">   
             <%= gravatar_for(post.user) %>
             <div class= "name-posted-list"> 
