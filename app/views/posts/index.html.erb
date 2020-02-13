@@ -5,7 +5,7 @@
 
   <% @posts.each do |post| %>
     <ul class="d-flex flex-column align-items-center justify-content-center">
-      <% if post.user == current_user || friends_with?(post.author)%>
+      <% if isit_me?(post.user) || friends_with?(post.author)%>
         <li class="home-li" id="posts-timeline">
           <div class="gravatar-list">   
             <%= gravatar_for(post.user) %>
