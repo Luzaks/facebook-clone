@@ -57,15 +57,16 @@ ul {
     line-height: 1.7em;
   }
 
-  header {
-    display: flex;
+  #header-display {
+    display: flex ;
     align-items: center;
     justify-content: space-between;
   }
   
+  
   .header-info {
       background-color: #29487d;
-      font-size: 12px;
+      font-size: 13px;
       font-family:Roboto, Helvetica, Arial, sans-serif;
       color: white;
       letter-spacing: -1px;
@@ -81,6 +82,19 @@ ul {
         list-style: none;
     
     }
+
+#header-icons {
+  a {
+    margin-right: 5px;
+    padding-right: 5px;
+  }
+
+  svg {
+     margin-left: 5px;
+     padding-left: 5px;
+     width: 2em;
+  }
+}
 
 .user-info img {
   margin: 0 auto;
