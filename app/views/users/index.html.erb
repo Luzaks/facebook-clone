@@ -4,7 +4,6 @@
     <div>
       <p> <%=gravatar_for(user) %></p>
       <p><%= link_to user.name, user %> <%=link_to user.lastname, user%></p>
-      
       <% if its_me?(user) %>
         <%= button_to 'Go to My Profile ', user, method: :get %>  
       <% elsif pending_for_accept_my_request(user) %>
