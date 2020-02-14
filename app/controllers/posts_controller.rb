@@ -3,7 +3,8 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = Post.all
+    @posts = Post.where(user: (friends_and_myself(current_user)))
+
   end
 
   def create
@@ -33,4 +34,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:content)
   end
+  
 end
