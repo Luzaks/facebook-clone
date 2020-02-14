@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  helper_method :friends_and_myself 
+  helper_method :friends_and_myself
 
   private
 
@@ -17,6 +17,4 @@ class ApplicationController < ActionController::Base
     friends_list.compact
     friends_list << user
   end
-
-
 end
