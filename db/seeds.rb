@@ -4,12 +4,6 @@ User.create!(name:  "Foo",
              password:              "foobar",
              password_confirmation: "foobar")
 
-User.create!(name:  "Melissa",
-             lastname: "Castorena",
-             email: "mcastorena0316@gmail.com",
-             password:              "123456",
-             password_confirmation: "123456")
-
 User.create!(name:  "Lu",
              lastname: "Rangel",
              email: "kanemekanik@gmail.com",
