@@ -18,7 +18,7 @@ User.create!(name:  "Lu",
 
 
 
-30.times do |n|
+20.times do |n|
   name  = Faker::Name.name
   lastname = Faker::Name.last_name
   email = "example-#{n+1}@railstutorial.org"
@@ -31,7 +31,7 @@ User.create!(name:  "Lu",
 end
 
 users = User.order(:created_at).take(6)
-50.times do
+20.times do
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.posts.create!(content: content) }
 end

@@ -11,6 +11,26 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  def friends
+    result = []
+    friendships.where(friendship_status: true).each do |x|
+      result << x.friend
+    end
+    result
+  end
+
+  def inverse_friends
+    result = [self]
+    inverse_friendships.where(friendship_status: true).each do |x|
+      result << x.user
+    end
+    result
+  end
+
+  def friends_and_own_posts
+    Post.where(user: (friends + inverse_friends))
+  end
+
   validates :name, presence: true
   validates :lastname, presence: true
 end
