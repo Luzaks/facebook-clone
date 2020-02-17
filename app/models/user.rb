@@ -4,7 +4,9 @@ class User < ApplicationRecord
   has_many :comment_id, through: :comment, source: 'Post'
   has_many :likes, foreign_key: 'user_id'
   has_many :friendships
+  has_many :confirmed_friends, -> { where(friendships: { friendship_status: true }) }, through: :friendships, source: :friend
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
+  has_many :inverse_confirmed_friends, -> { where(friendships: { friendship_status: true }) }, through: :inverse_friendships, source: :user
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -12,24 +14,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[facebook]
 
-  def friends
-    result = []
-    friendships.where(friendship_status: true).each do |x|
-      result << x.friend
-    end
-    result
-  end
-
-  def inverse_friends
-    result = [self]
-    inverse_friendships.where(friendship_status: true).each do |x|
-      result << x.user
-    end
-    result
-  end
-
   def friends_and_own_posts
-    Post.where(user: (friends + inverse_friends))
+    Post.where(user: (confirmed_friends + inverse_confirmed_friends + [self]))
   end
 
   validates :name, presence: true

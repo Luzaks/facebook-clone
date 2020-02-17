@@ -1,24 +1,47 @@
-# README
+# Facebook clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
 
-Things you may want to cover:
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-* Ruby version
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-* System dependencies
+In this project we build a Ruby on Rails app with a similar behaviour than Facebook. Users can:
 
-* Configuration
+- Sign up, with real Facebook account and with a normal one.
+- Add/remove friends.
+- Send or accept friend requests.
+- Create posts and comments.
+- Like and unlike their own posts/comments and their friend's.
 
-* Database creation
+<div align="center"><img src="app/assets/images/screencapture-localhost-3000-2020-02-17-15_32_03.png"></div>
 
-* Database initialization
 
-* How to run the test suite
+Link for project specifications: [Odin-Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project)
 
-* Services (job queues, cache servers, search engines, etc.)
+### Built With
 
-* Deployment instructions
+*   Ruby
+*   Ruby on Rails
+*   Rubocop
+*   Rspec with Capybara for testing
+*   Devise for authentication
+*   Omniauth for sign in with Facebook Account
 
-* ...
+<!-- CONTACT -->
+## Contact
+
+Melissa Castorena - mcastorena0316@gmail.com
+
+Guadalupe Rangel- kanemekanik@gmail.com
+
+Project Link: [Facebook Clone](https://github.com/Luzaks/facebook-clone/tree/master)
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [Microverse](https://www.microverse.org/)
