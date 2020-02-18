@@ -20,7 +20,7 @@ In this project we build a Ruby on Rails app with a similar behaviour than Faceb
 
 <div align="center"><img src="app/assets/images/screencapture-localhost-3000-2020-02-17-15_32_03.png"></div>
 
-<div align="center">[Live version](https://young-fortress-61632.herokuapp.com)</div>
+<p align="center"> <a href="https://young-fortress-61632.herokuapp.com">Live version</a></p>
 
 
 Link for project specifications: [Odin-Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project)
