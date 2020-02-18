@@ -1,4 +1,6 @@
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
 h1#header-timeline {
     color: #D3D3D3;
     font-family: 'Barlow Condensed', sans-serif;
@@ -19,6 +21,7 @@ h1#header-timeline {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
   p.like-content,
    .button_to {
       display: flex;
@@ -37,6 +40,7 @@ h1#header-timeline {
  .timeline-content {
     font-family: 'Kalam', cursive;
     margin: 10px 0;
+    text-align: left;
    }
   .name-posted-list {
     p {
@@ -72,6 +76,10 @@ h1#header-timeline {
 }
 ul.containig-posts{
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   #posts-timeline {
     border-bottom: 2px solid #e9ebee;
     padding-bottom: 7px;

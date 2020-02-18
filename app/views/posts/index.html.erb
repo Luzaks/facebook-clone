@@ -4,8 +4,8 @@
 <div class="index-list">
 
   <% @posts.each do |post| %>
-    <ul class="containig-posts d-flex flex-column align-items-center justify-content-center">
-        <li class="home-li text-center" id="posts-timeline">
+    <ul class="containig-posts ">
+        <li class="home-li" id="posts-timeline">
           <div class="gravatar-list">   
             <%= gravatar_for(post.user) %>
             <div class= "name-posted-list"> 
@@ -14,7 +14,7 @@
             </div> 
           </div>
     
-          <p class= "text-left timeline-content"><%= post.content%></p>
+          <p class= "timeline-content"><%= post.content%></p>
           <p class="like-content text-center">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="1.1em" height="1em" viewBox="0 0 1200.000000 1419.000000"
