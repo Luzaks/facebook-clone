@@ -1,0 +1,14 @@
+.users-list {
+    list-style: none;
+    background-color: white;
+    width:30%;
+    margin: 0 auto;
+    div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img, form {
+         padding: 10px;
+        }
+        }
+}

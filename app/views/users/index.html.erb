@@ -1,0 +1,26 @@
+<ul class="text-center">
+  <% @users.each do |user| %>
+    <li class= "users-list">
+    <div>
+      <p> <%=gravatar_for(user) %></p>
+      <p><%= link_to user.name, user %> <%=link_to user.lastname, user%></p>
+      <% if its_me?(user) %>
+        <%= button_to 'Go to My Profile ', user, method: :get %>  
+      <% elsif pending_for_accept_my_request(user) %>
+        <%= button_to 'Cancel Request Sent', friendship_path(finding_friendship_id(user)), method: :delete %> 
+      <% elsif pending_for_me_to_accept(user) %>
+        <div>
+          <%= button_to 'Accept Request',edit_friendship_path(finding_friendship_id(user)), method: :get %> 
+          <%= button_to 'Cancel Request',friendship_path(finding_friendship_id(user)), method: :delete %> 
+        </div>
+      <% elsif we_are_friends(user)  %>
+        <%= button_to 'Go to My Friend\'s Profile ', user, method: :get %>  
+        <%= button_to 'Remove',friendship_path(finding_friendship_id(user)), method: :delete %> 
+      <% elsif %>
+        <%= button_to 'Add Friend', "#{authenticated_root_path}friendship/create/#{user.id}", method: :post %>  
+      <% end %>
+
+      </li> 
+    </div>  
+  <% end %>
+</ul>

@@ -1,0 +1,415 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
+
+
+body {
+ background-color: #e9ebee !important;
+} 
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .center {
+    text-align: center;
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+  }
+  
+  h1 {
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color:black;
+  }
+  
+  h3 {
+    color: #777;
+  }
+  
+  p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+  }
+
+  #header-display {
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  .header-info {
+      background-color: #29487d;
+      font-size: 13px;
+      font-family:Roboto, Helvetica, Arial, sans-serif;
+      color: white;
+      letter-spacing: -1px;
+      padding: 0 45px 0 0;
+      font-weight: bold;
+      height: 82px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .navbar-nav li a {
+        color: black;
+        list-style: none;
+    
+    }
+
+#header-icons {
+  a {
+    margin-right: 5px;
+    padding-right: 5px;
+  }
+
+  svg {
+     margin-left: 5px;
+     padding-left: 5px;
+     width: 2em;
+  }
+}
+
+.user-info img {
+  margin: 0 auto;
+}
+
+.edit-header {
+  margin: 0;
+}
+
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+textarea {
+  width: 100%;
+  border-radius: 15px;
+  border-style: solid;
+  padding: 10px;
+}
+
+.post-info {
+  padding-right: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 7px;
+  .posts {
+    list-style: none;
+    padding-left: 0;
+    li{
+      border-radius: 7px;
+      padding: 15px;
+    }
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 0.95em;
+    margin: 10px 0;
+  }
+  section {
+    background-color: white;
+    border-radius: 7px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      margin-bottom: 0;
+    }
+    .post-elements {
+      width:80%;
+      border-bottom: 2px solid #e9ebee;
+      padding: 30px 15px 28px 15px;
+      position: relative;
+      p.content {
+        a {
+        font-family: 'Courgette', cursive;
+        font-size: 1.4em;
+        font-weight: 600;
+        color: #337ab7;
+        margin-bottom: 10px;
+        }
+        a:hover {
+        text-decoration: underline;
+        }
+      }
+      span.content {
+        font-size: 1.1em;
+        font-family: 'Kalam', cursive;
+      }
+      .timestamp,
+      li a {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 0.9em;
+      }
+      .timestamp {
+        color: #616770;
+      }
+      .button_to {
+        input {
+          font-family: 'Barlow Condensed', sans-serif;
+          position: absolute;
+          border: dashed 3px #333333;
+          border-radius: 17px;
+          background-color: #e9ebee;
+          padding: 5px 10px;
+          left: 45px;
+          bottom: 15px;
+          letter-spacing: 0.2em;
+        }
+        input:hover {
+          color: red;
+          font-weight: 600;
+          border-color: 1px dashed #616770;
+        }
+        input:active {
+          color: black;
+          border-color: 2px dashed black;
+        }
+      }
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+    .new_comment {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      .field-comment {
+        width: 70%;
+        input {
+          border: solid 1px #e9ebee; 
+          width: 100%;
+          border-radius: 17px 17px 2px 2px;
+          padding: 8px 13px;
+        }
+      }
+      .btn-publish-comment {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 600;
+        width: 70%; 
+        border-radius: 2px 2px 17px 17px;
+        padding: 8px 13px;
+      }
+    }
+  }
+}
+
+.btn-publish {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  width: 95%;
+  margin-top: 10px;  
+  border-radius: 15px;
+  padding: 8px 13px;
+}
+
+.user-info {
+  margin-bottom: 10px;
+  img {
+    border-radius: 100%;
+    background-color: red;
+  }
+  p {
+    font-weight: 600;
+    margin: 0;
+  }  
+}
+
+.post-info h3,
+#post-list h3,
+::placeholder {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.edit-header {
+  font-weight: 600;
+  font-size: 1.7em;
+}
+
+.edit_user {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    input {
+      width: 300px;
+      padding: 13px;
+      border-radius: 5px;
+      border-style: solid;
+    }
+  }
+}
+
+.actions input {
+  color: #fff;
+  background-color: #337ab7;
+  border: #2e6da4 1px solid;
+  border-radius: 15px;
+  padding: 7px;
+  width: 200px;
+  font-weight: 600;
+}
+
+.alert-alert {
+  background-color: red;
+  color: #721C24;
+  background-color: #F8D7DA;
+  border-color: #F5C6CB;
+  font-weight: 600;
+}
+
+.alert-notice {
+  color: #155724;
+  background-color: #D4EDDA;
+  border-color: #C3E6CB;
+  font-weight: 600;
+}
+
+.new_user {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .field-1{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    label {
+      margin: 0 0 0 5px;
+    }
+    input {
+      margin: 0;
+    }
+  }
+}
+
+.like-content {
+  font-family: 'Kalam', cursive;
+  color: black;
+  margin: 0;
+}
+
+.comments-list {
+      background-color: #e9ebee;
+      padding: 8px 13px;
+      border-radius: 17px;
+      height: auto;
+      margin-top: 10px;
+      .user-name a {
+        font-family: 'Courgette', cursive;
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #337ab7;
+      }
+      .user-name a:hover {
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: #337ab7;
+      }
+      .comment-text {
+        font-family: 'Kalam', cursive;
+      }
+      .timestamp {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 0.85em;
+        color: #616770;
+        a {
+          font-family: 'Source Code Pro', monospace;
+          font-size: 1em;
+        }
+        .button_to {
+          input {
+            font-family: 'Barlow Condensed', sans-serif;
+            border: dashed 2px #333333;
+            border-radius: 17px;
+            background-color: #e9ebee;
+            padding: 1px 6px;
+            letter-spacing: 0.1em;
+            color: #333333;
+          }
+          input:hover {
+            color: red;
+            border-color: 1px dashed #616770;
+          }
+        }
+      }
+    }
+#comments-timeline {
+  margin: 0;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#posts-timeline {
+  padding: 0;
+  padding-top: 10px;
+}
+
+.comments-theader {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1em;
+  color: #616770;
+  margin-top: 7px;
+
+}
+
